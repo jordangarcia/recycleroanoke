@@ -1,0 +1,282 @@
+body {
+    background: url("/images/hex_textured_bg.jpg") repeat;
+    height: 100%;
+    width: 100%;
+    font-family: "Helvetica Neue", arial, sans-serf;
+    color: #333;
+}
+#top {
+    height: 151px;
+    background: url("/images/top_header_bg.jpg") repeat-x transparent;
+    width: 100%;
+}
+#main {
+    width: 100%;
+    background: url("/images/main_bg.jpg") repeat-x transparent;
+    height: 442px;
+    color: #1a2f11;
+}
+#top_logo {
+    width: 336px;
+    height: 144px;
+    position:absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -168px;
+    background: url("/images/top_logo.png") no-repeat transparent;
+
+}
+#main_bin {
+    width: 451px;
+    height: 351px;
+    position:absolute;
+    left: 30px;
+    top: 94px;
+    background: url("/images/large_bin.png") no-repeat transparent;
+}
+#main_title {
+    margin-top: 30px;
+    text-align:center;
+}
+.container {
+    position:relative;
+}
+.inner-container {
+    width: 900px;
+    margin: 0 auto;
+}
+#main_contents {
+    padding: 35px 0 0 500px;
+}
+#main_contents h3 {
+    font-weight:normal;
+    text-decoration: underline;
+}
+#main_contents ul {
+    font-size: 24px;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+#main_contents ul > li{
+    font-weight:normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+#get_started_btn {
+    width: 248px;
+    height: 73px;
+    background: url("/images/get_started_btn.png") no-repeat transparent;
+    margin: 30px auto 0;
+    display:block;
+}
+#get_started_btn:hover {
+    background-position: 0 -73px;
+}
+hr {
+    border: none;
+    height: 1px;
+    background: #888;
+}
+#how_it_works {
+    background: url(/images/blue_divider.png) top center repeat-x transparent;
+}
+#how_it_works .container {
+    padding-top: 100px;
+}
+#how_it_works_tag {
+    position:absolute;
+    top: 15px;
+    left: 30px;
+    background:  url(/images/how_it_works_tag.png) no-repeat transparent;
+    width: 255px;
+    height: 59px;
+    box-sizing: border-box;
+    text-align: center;
+    color:white;
+}
+.how-it-works-box {
+    width: 270px;
+    height: 325px;
+    background: url(/images/how_it_works_box.png) no-repeat transparent;
+    position:relative;
+    box-sizing: border-box;
+    padding: 195px 15px 10px;
+    margin-left: 30px;
+}
+.how-it-works-icon {
+    width: 235px;
+    height: 193px;
+    position:absolute;
+    top: 0;
+    left: 15px;
+}
+.how-it-works-box .step-number {
+    position:absolute;
+    left: 15px;
+    top: 8px;
+    color: #888;
+}
+.how-it-works-box h4 {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight:normal;
+    margin: 0 0 5px;
+}
+#can_cannot_recycle {
+    margin: 30px 0;
+}
+#can_cannot_recycle td {
+    padding: 10px 20px;
+    vertical-align: top;
+}
+#can_cannot_recycle th {
+    padding: 20px;
+    font-size:20px;
+    text-align:center;
+}
+#can_cannot_recycle td.category {
+    font-size: 20px;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    text-align:right;
+}
+#can_cannot_recycle .can-recycle {
+    background: rgb(201,239,188);
+    background: rgba(201,239,188,.5);
+    width: 40%;
+    box-sizing: border-box;
+}
+#can_cannot_recycle .cannot-recycle {
+    background: rgb(239,188,188);
+    background: rgba(239,188,188,.5);
+    width: 40%;
+    box-sizing: border-box;
+}
+#can_cannot_recycle .can-recycle-bottom {
+    border-radius: 0 0 0 10px;
+}
+#can_cannot_recycle .cannot-recycle-bottom {
+    border-radius: 0 0 10px 0;
+    height: 20px;
+    width: 40%;
+}
+#can_cannot_recycle th.can-recycle {
+    border-radius: 10px 0 0 0;
+}
+#can_cannot_recycle th.cannot-recycle {
+    border-radius: 0 10px 0 0;
+}
+#get_started {
+    background: #234255;
+    color:white;
+    padding: 30px 0;
+    margin: 60px 0;
+}
+.faq-question {
+    color:#a0a0a0;
+    font-weight:normal;
+    margin: 30px 0 10px;
+}
+p.faq-answer {
+    font-family: Georgia, serif;
+    color:white;
+    font-size: 16px;
+}
+p.get-started-form-instructions {
+    color:white;
+    font-size: 16px;
+    font-family: Helvetica neue, arial, sans-serif;
+    margin: 20px 0 30px;
+}
+.cl {
+    clear:both;
+    height: 0px;
+    width: 0px;
+}
+#get_started .faq-col {
+    width: 300px;
+    float: left;
+}
+#get_started .form-col {
+    width: 500px;
+    float:right;
+}
+#get_started_form input[type=text], #get_started_form textarea {
+    display:block;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 10px;
+    height: 48px;
+    background: white;
+    color:#333333;
+    width:100%;
+    box-sizing: border-box;
+    margin: 10px 0 20px;
+}
+#get_started_form input[type=text]{
+    height: 48px;
+}
+#get_started_form textarea {
+    height: 150px;
+}
+#get_started_form input[type=text].labelOn, #get_started_form textarea.labelOn {
+    color:#a0a0a0;
+}
+#get_started_form .get-started-submit-btn {
+    font-size: 16px;
+    padding: 15px 30px;
+    float:right;
+}
+.contact-info .email-link {
+    background:  url(/images/contact_icons_white.png) 0 -36px no-repeat transparent;
+    padding: 0 0 0 46px;
+    background-repeat: no-repeat;
+    line-height: 36px;
+    display:inline-block;
+    color:white;
+    font-size:16px;
+}
+.contact-info .phone-number {
+    font-size:16px;
+    background:  url(/images/contact_icons_white.png) 0 0 no-repeat transparent;
+    padding: 0 0 0 36px;
+    background-repeatp: no-repeat;
+    line-height: 36px;
+    display:inline-block;
+    color:white;
+    margin-left: 30px;
+    float: right;
+}
+.contact-info .email-link:hover {
+    color:white;
+    text-decoration:white
+}
+.contact-info .email-link:visited {
+    color:white;
+}
+p.other-contact-methods {
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+}
+#get_started hr {
+    color: #888;
+}
+#about_us .info-col {
+    width: 300px;
+    float:right;
+}
+#about_us .mission-col {
+    width: 500px;
+    float: left;
+}
+ul.mission-points {
+    margin-top: 30px;
+}
+ul.mission-points li {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
