@@ -6,3 +6,6 @@
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #    prefix:   /_internal
+main_bundle_controllers:
+    resource: "@MainBundle/Controller"
+    type:     annotation
