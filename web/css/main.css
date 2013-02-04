@@ -280,3 +280,6 @@ ul.mission-points li {
     line-height: 24px;
     margin-bottom: 10px;
 }
+.recycle-table-details p{
+    text-align:right;
+}
