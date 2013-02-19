@@ -8,6 +8,13 @@
         <script type="text/javascript" src="/js/jquery.labelify.js"></script>
     </head>
     <body>
+    {% for type, messages in app.session.getFlashBag().all() %}
+        {% for message in messages %}
+            <div class="top-flash-message alert alert-{{type}}">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endfor %}
         <div id="top">
             <div id="top_logo"></div>
         </div>
@@ -223,15 +230,40 @@
                             To get started with Star City or if you have any questions please fill out the form below.
                         </p>
 
-                        <form id="get_started_form">
-                            <input type="text" name="name" id="get_started_name" title="name">
-                            <input type="text" name="email" id="get_started_email" title="email">
-                            <input type="text" name="phone" id="get_started_phone" title="phone number (optional)">
-                            <textarea name="message" id="get_started_message" cols="30" rows="5" title="message"></textarea>
+                        <form id="get_started_form" method="post" {{ form_enctype(form) }}>
+                            <div>
+                                {{ form_label(form.email) }}
+                                <div class="errors">
+                                    {{ form_errors(form.email) }}
+                                </div>
+                                {{ form_widget(form.email) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.name) }}
+                                <div class="errors">
+                                    {{ form_errors(form.name) }}
+                                </div>
+                                {{ form_widget(form.name) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.phone) }}
+                                <div class="errors">
+                                    {{ form_errors(form.phone) }}
+                                </div>
+                                {{ form_widget(form.phone) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.message) }}
+                                <div class="errors">
+                                    {{ form_errors(form.message) }}
+                                </div>
+                                {{ form_widget(form.message) }}
+                            </div>
+
+                            {{ form_rest(form) }}
 
                             <div class="submit-wrapper">
-                                <!--<input type="submit" value="Send Message" class="btn get-started-submit-btn" />-->
-                                This feature is coming soon.  Please contact us via Email or Phone below.
+                                <input type="submit" value="Send Message" class="btn get-started-submit-btn" formnovalidate />
                                 <div class="cl">&nbsp;</div>
                             </div>
                         </form>
@@ -294,10 +326,5 @@
 
         </div>
 
-        <script type="text/javascript">
-            $(document).ready(function(){
-              $(":text, textarea").labelify({labelledClass: "labelOn"});
-            });
-        </script>
     </body>
 </html>

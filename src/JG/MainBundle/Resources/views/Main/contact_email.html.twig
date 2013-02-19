@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body class="body" style="margin: 0; background-color: #E5E5E5;" marginheight="0" topmargin="0" marginwidth="0" leftmargin="0">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#E5E5E5">
+	<tbody>
+		<tr>
+			<td height="50"></td>
+		</tr>
+		<tr>
+			<td>
+				<table width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFFFFF" align="center">
+					<tbody>
+						<tr>
+							<td width="600" height="276">
+								<table width="600" height="276" cellspacing="0" cellpadding="0" bgcolor="#234255" >
+									<tbody>
+										<tr>
+											<td width="15" height="50"></td>
+											<td width="570" height="50"></td>
+											<td width="15" height="50"></td>
+										</tr>
+										<tr>
+											<td width="15" height="72"></td>
+											<td width="570" height="72" style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 36px; color:white; line-height: 72px; font-weight:bold;">
+												New Message
+											</td>
+											<td width="15" height="72"></td>
+										</tr>
+										<tr>
+											<td width="15" height="30"></td>
+											<td width="570" height="30" style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 24px; color:#9cb5ed; line-height: 30px; font-weight:normal;">
+												New message from {{ info.name }}
+											</td>
+											<td width="15" height="30"></td>
+										</tr>
+										<tr>
+											<td width="15" height="74"></td>
+											<td width="570" height="74"></td>
+											<td width="15" height="74"></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td width="600" >
+								<table width="600" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+									<tbody>
+										<tr valign="top">
+											<td width="15"></td>
+											<td width="570" style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 18px; color:#303030; line-height: 24px; font-weight:normal;">
+                                                <p>
+                                                    name: {{ info.name }}
+                                                </p>
+
+                                                <p>
+                                                    email: {{ info.email }}
+                                                </p>
+                                                {% if info.phone %}
+                                                <p>
+                                                    phone: {{info.phone}}
+                                                </p>
+                                                {% endif %}
+                                                <hr>
+
+												<p>
+													{{ info.message}}
+												</p>
+											</td>
+											<td width="15"></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+
+                        <tr>
+							<td width="600" height="20" ></td>
+						</tr>
+                        <tr>
+							<td width="600" height="20" background="http://d34bd3dzgheh6b.cloudfront.net/images/email/footer_shadow.jpg"></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

@@ -9,6 +9,7 @@ body {
     height: 151px;
     background: url("/images/top_header_bg.jpg") repeat-x transparent;
     width: 100%;
+    position:relative;
 }
 #main {
     width: 100%;
@@ -203,7 +204,7 @@ p.get-started-form-instructions {
     width: 500px;
     float:right;
 }
-#get_started_form input[type=text], #get_started_form textarea {
+#get_started_form input[type=text], #get_started_form input[type=email], #get_started_form textarea {
     display:block;
     border-radius: 0;
     font-size: 16px;
@@ -221,13 +222,16 @@ p.get-started-form-instructions {
 #get_started_form textarea {
     height: 150px;
 }
-#get_started_form input[type=text].labelOn, #get_started_form textarea.labelOn {
+#get_started_form input[type=text].labelOn, #get_started_form input[type=email].labelOn, #get_started_form textarea.labelOn {
     color:#a0a0a0;
 }
 #get_started_form .get-started-submit-btn {
     font-size: 16px;
     padding: 15px 30px;
     float:right;
+}
+#get_started_form .errors {
+    color: red;
 }
 .contact-info .email-link {
     background:  url(/images/contact_icons_white.png) 0 -36px no-repeat transparent;
@@ -281,5 +285,14 @@ ul.mission-points li {
     margin-bottom: 10px;
 }
 .recycle-table-details p{
+    text-align:center;
+}
+.top-flash-message {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    padding: 15px 35px;
+    margin-bottom: 0;
+    font-size: 16px;
     text-align:center;
 }
