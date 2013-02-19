@@ -52,7 +52,7 @@ class MainController extends Controller
         $message = \Swift_Message::newInstance()
             ->setSubject('New message from: '.$contactInfo->getName())
             ->setFrom('recycleroanoke@gmail.com')
-            ->setTo('jordan.garcia@gmail.com')
+            ->setTo('starcityrecycling@gmail.com')
             ->setBody(
                 $this->renderView(
                     'MainBundle:Main:contact_email.html.twig',
