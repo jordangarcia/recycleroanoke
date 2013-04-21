@@ -32,7 +32,12 @@ body {
 .social-links {
     position:absolute;
     right: 0;
-    bottom: 5px;
+    top: 50px;
+}
+#top .swoco-logo {
+  position: absolute;
+  top: 37px;
+  right: 115px;
 }
 .social-link {
   display:block;
@@ -44,7 +49,6 @@ body {
 .social-link:hover {
   text-decoration:none;
 }
-
 #main_bin {
     width: 451px;
     height: 351px;
