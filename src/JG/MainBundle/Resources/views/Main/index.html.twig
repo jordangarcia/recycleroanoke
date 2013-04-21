@@ -1,324 +1,336 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Star City Recycling</title>
-        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="all">
-        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all">
-        <script type="text/javascript" src="/js/jquery-1.9.0-min.js"></script>
-        <script type="text/javascript" src="/js/jquery.labelify.js"></script>
-    </head>
-    <body>
-    {% for type, messages in app.session.getFlashBag().all() %}
-        {% for message in messages %}
-            <div class="top-flash-message alert alert-{{type}}">
-                {{message}}
+  <head>
+    <title>Star City Recycling</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" media="all">
+    <script type="text/javascript" src="/js/jquery-1.9.0-min.js"></script>
+    <script type="text/javascript" src="/js/jquery.labelify.js"></script>
+  </head>
+<body>
+{% for type, messages in app.session.getFlashBag().all() %}
+  {% for message in messages %}
+    <div class="top-flash-message alert alert-{{type}}">
+      {{message}}
+    </div>
+  {% endfor %}
+{% endfor %}
+<div id="top">
+  <div class="container">
+    <div id="top_logo"></div>
+    <div class="social-links">
+      <a href="http://starcityrecycling.blogspot.com/" class="social-link">
+        <img src="/images/bloggericon.png" width=24 height=24>
+        Blog
+      </a>
+      <a href="http://www.facebook.com/StarCityRecycling" class="social-link">
+        <img src="/images/fbicon.png" width=24 height=24>
+        Facebook
+      </a>
+    </div>
+  </div>
+</div>
+  <div id="main">
+    <div class="container">
+      <h1 id="main_title">
+        Bringing Curbside Recycling To Roanoke County
+      </h1>
+      <div id="main_bin"></div>
+      <div id="main_contents">
+        <h3>
+          Save The Environment And Your Time!
+        </h3>
+        <ul>
+          <li>
+            No Sorting Required!
+          </li>
+          <li>
+            Easy Curbside Pickup Every Week
+          </li>
+          <li>
+            Only 66 cents a day!
+          </li>
+        </ul>
+        <a href="#get_started" id="get_started_btn"></a>
+      </div>
+    </div>
+  </div>
+  <div id="how_it_works">
+    <div class="container">
+      <div id="how_it_works_tag">
+        <h3>How It Works</h3>
+      </div>
+      <div class="row">
+        <div class="span4">
+          <div class="how-it-works-box" style="margin-left: 30px;">
+            <img class="how-it-works-icon" src="/images/step_1_img.jpg" alt="">
+            <span class="step-number">
+              <h1>1</h1>
+            </span>
+            <h4>
+              Receive your recycle bin
+            </h4>
+            <p>
+            Only one 32 gallon bin is needed for all of your recyclables.
+            </p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="how-it-works-box">
+            <img class="how-it-works-icon" src="/images/step_2_img.jpg" alt="">
+            <span class="step-number">
+              <h1>2</h1>
+            </span>
+            <h4>
+              Put recyclables in your bin
+            </h4>
+            <p>
+            Place your paper, plastic, metal cans, and glass in your bin. Check out the recycling chart to see what you can recycle!
+            </p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="how-it-works-box">
+            <img class="how-it-works-icon" src="/images/step_3_img.jpg" alt="">
+            <span class="step-number">
+              <h1>3</h1>
+            </span>
+            <h4>
+              Place your bin on the curb
+            </h4>
+            <p>
+            No need to sort anything.  We will pick up your recyclables every week and sort them for you!
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="inner-container" style="margin-top: 50px;">
+        <div class="page-section">
+          <h2>What to Recycle</h2>
+        </div>
+        <table id="can_cannot_recycle">
+          <tr>
+            <th>
+            </th>
+            <th class="can-recycle">
+              Recycle
+            </th>
+            <th class="cannot-recycle">
+              Don't Recycle
+            </th>
+          </tr>
+          <tr>
+            <td class="category">
+              Paper
+            </td>
+            <td class="can-recycle">
+              Paper bags, Newspaper, Cardboard, Office paper, Magazines, Phone books, Paper gift wrap
+            </td>
+            <td class="cannot-recycle">
+              Milk Cartons, Paper or cardboard with plastic coating, Any type of paper with food waste, such as paper towels and pizza boxes.
+            </td>
+          </tr>
+          <tr>
+            <td class="category">
+              Plastic
+            </td>
+            <td class="can-recycle">
+              Roanoke County accept plastics #1-#7.  The number will be found on the container inside the recycling symbol. If there is not a number, please don't recycle.
+            </td>
+            <td class="cannot-recycle">
+              Store-bought garbage bags, Bubble wrap, plastic packaging wrap
+            </td>
+          </tr>
+          <tr>
+            <td class="category">
+              Metal Cans
+            </td>
+            <td class="can-recycle">
+              Drink cans, Aluminum cans, Tin cans, Metal caps and tops
+            </td>
+            <td class="cannot-recycle">
+              Scrap metal, Car parts, Wire fencing, Compact Fluorescent Light Bulbs
+            </td>
+          </tr>
+          <tr>
+            <td class="category">
+              Glass
+            </td>
+            <td class="can-recycle">
+              All types of glass
+            </td>
+            <td class="cannot-recycle">
+              Broken glass
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td class="can-recycle can-recycle-bottom"></td>
+            <td class="cannot-recycle cannot-recycle-bottom"></td>
+          </tr>
+        </table>
+        <div class="recycle-table-details">
+          <p style="font-weight:bold;">Tips:</p>
+          <p>
+          Wash out all containers before recycling.
+
+
+          </p>
+
+          <p>
+          Your recycling bin should have all dry material with no liquids or food waste present
+          </p>
+
+          <p>
+          Break down your boxes in order to make room in the bin.
+          </p>
+          <p>
+          If you are wondering if a material is recyclable or not, it may be easier to look at what NOT to recycle
+
+          </p>
+
+          <p>
+          When in doubt, leave it out!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="get_started">
+    <div class="container">
+      <div class="inner-container">
+        <div class="faq-col">
+          <h2>Getting Started</h2>
+          <h4 class="faq-question">
+            How much does it cost?
+          </h4>
+          <p class="faq-answer">
+          The cost for our curbside pickup service is $20 per month with an additional one time payment of $25 for the recycling bin.
+          </p>
+          <h4 class="faq-question">
+            Am I eligible for the service?
+          </h4>
+          <p class="faq-answer">
+          We are currently expanding our service throughout Roanoke County and Salem. To find out if we are servicing your area please fill out the form and include your address in the message box.
+          </p>
+          <h4 class="faq-question">
+            How do I pay?
+          </h4>
+
+          <p class="faq-answer">
+          Checks, credit cards, and cash are all acceptable forms of payment.  Checks need to be made out to Star City Recycling.
+          </p>
+
+          <p class="faq-answer">
+          You can either pay in person or mail checks to: <br>
+          <br>
+          Star City Recycling<br>
+          P.O. Box 20312<br>
+          Roanoke, VA 24018<br>
+          </p>
+        </div>
+        <div class="form-col">
+          <p class="get-started-form-instructions">
+          To get started with Star City or if you have any questions please fill out the form below.
+          </p>
+
+          <form id="get_started_form" method="post" {{ form_enctype(form) }}>
+            <div>
+              {{ form_label(form.email) }}
+              <div class="errors">
+                {{ form_errors(form.email) }}
+              </div>
+              {{ form_widget(form.email) }}
             </div>
-        {% endfor %}
-    {% endfor %}
-        <div id="top">
-            <div id="top_logo"></div>
-        </div>
-        <div id="main">
-            <div class="container">
-                <h1 id="main_title">
-                    Bringing Curbside Recycling To Roanoke County
-                </h1>
-                <div id="main_bin"></div>
-                <div id="main_contents">
-                    <h3>
-                        Save The Environment And Your Time!
-                    </h3>
-                    <ul>
-                        <li>
-                                No Sorting Required!
-                        </li>
-                        <li>
-                                Easy Curbside Pickup Every Week
-                        </li>
-                        <li>
-                                Only 66 cents a day!
-                        </li>
-                    </ul>
-                    <a href="#get_started" id="get_started_btn"></a>
-                </div>
+            <div>
+              {{ form_label(form.name) }}
+              <div class="errors">
+                {{ form_errors(form.name) }}
+              </div>
+              {{ form_widget(form.name) }}
             </div>
-        </div>
-        <div id="how_it_works">
-            <div class="container">
-                <div id="how_it_works_tag">
-                    <h3>How It Works</h3>
-                </div>
-                <div class="row">
-                    <div class="span4">
-                        <div class="how-it-works-box" style="margin-left: 30px;">
-                            <img class="how-it-works-icon" src="/images/step_1_img.jpg" alt="">
-                            <span class="step-number">
-                                <h1>1</h1>
-                            </span>
-                            <h4>
-                                Receive your recycle bin
-                            </h4>
-                            <p>
-                                Only one 32 gallon bin is needed for all of your recyclables.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="how-it-works-box">
-                            <img class="how-it-works-icon" src="/images/step_2_img.jpg" alt="">
-                            <span class="step-number">
-                                <h1>2</h1>
-                            </span>
-                            <h4>
-                                Put recyclables in your bin
-                            </h4>
-                            <p>
-                                Place your paper, plastic, metal cans, and glass in your bin. Check out the recycling chart to see what you can recycle!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="how-it-works-box">
-                            <img class="how-it-works-icon" src="/images/step_3_img.jpg" alt="">
-                            <span class="step-number">
-                                <h1>3</h1>
-                            </span>
-                            <h4>
-                                Place your bin on the curb
-                            </h4>
-                            <p>
-                                No need to sort anything.  We will pick up your recyclables every week and sort them for you!
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="inner-container" style="margin-top: 50px;">
-                    <div class="page-section">
-                        <h2>What to Recycle</h2>
-                    </div>
-                    <table id="can_cannot_recycle">
-                        <tr>
-                            <th>
-                            </th>
-                            <th class="can-recycle">
-                                Recycle
-                            </th>
-                            <th class="cannot-recycle">
-                                Don't Recycle
-                            </th>
-                        </tr>
-                        <tr>
-                            <td class="category">
-                                Paper
-                            </td>
-                            <td class="can-recycle">
-                                Paper bags, Newspaper, Cardboard, Office paper, Magazines, Phone books, Paper gift wrap
-                            </td>
-                            <td class="cannot-recycle">
-                                Milk Cartons, Paper or cardboard with plastic coating, Any type of paper with food waste, such as paper towels and pizza boxes.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="category">
-                                Plastic
-                            </td>
-                            <td class="can-recycle">
-                                Roanoke County accept plastics #1-#7.  The number will be found on the container inside the recycling symbol. If there is not a number, please don't recycle.
-                            </td>
-                            <td class="cannot-recycle">
-                                Store-bought garbage bags, Bubble wrap, plastic packaging wrap
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="category">
-                                Metal Cans
-                            </td>
-                            <td class="can-recycle">
-	                            Drink cans, Aluminum cans, Tin cans, Metal caps and tops
-                            </td>
-                            <td class="cannot-recycle">
-                                Scrap metal, Car parts, Wire fencing, Compact Fluorescent Light Bulbs
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="category">
-                                Glass
-                            </td>
-                            <td class="can-recycle">
-	                            All types of glass
-                            </td>
-                            <td class="cannot-recycle">
-                                Broken glass
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            </td>
-                            <td class="can-recycle can-recycle-bottom"></td>
-                            <td class="cannot-recycle cannot-recycle-bottom"></td>
-                        </tr>
-                    </table>
-                    <div class="recycle-table-details">
-                        <p style="font-weight:bold;">Tips:</p>
-                        <p>
-                            Wash out all containers before recycling.
-
-
-                        </p>
-
-                        <p>
-                            Your recycling bin should have all dry material with no liquids or food waste present
-                        </p>
-
-                        <p>
-                            Break down your boxes in order to make room in the bin.
-                        </p>
-                        <p>
-                            If you are wondering if a material is recyclable or not, it may be easier to look at what NOT to recycle
-
-                        </p>
-
-                        <p>
-                            When in doubt, leave it out!
-                        </p>
-                    </div>
-                </div>
+            <div>
+              {{ form_label(form.phone) }}
+              <div class="errors">
+                {{ form_errors(form.phone) }}
+              </div>
+              {{ form_widget(form.phone) }}
             </div>
-        </div>
-        <div id="get_started">
-            <div class="container">
-                <div class="inner-container">
-                    <div class="faq-col">
-                        <h2>Getting Started</h2>
-                        <h4 class="faq-question">
-                            How much does it cost?
-                        </h4>
-                        <p class="faq-answer">
-                            The cost for our curbside pickup service is $20 per month with an additional one time payment of $25 for the recycling bin.
-                        </p>
-                        <h4 class="faq-question">
-                            Am I eligible for the service?
-                        </h4>
-                        <p class="faq-answer">
-                            Currently we are only offering service in certain areas of Roanoke County. If you would like to know if you're eligible please fill out the form and include your address in the message box.
-                        </p>
-                        <h4 class="faq-question">
-                            How do I pay?
-                        </h4>
-
-                        <p class="faq-answer">
-                            Checks, credit cards, and cash are all acceptable forms of payment.  Checks need to be made out to Star City Recycling.
-                        </p>
-
-                        <p class="faq-answer">
-                            You can either pay in person or mail checks to: <br>
-                            <br>
-                            Star City Recycling<br>
-                            P.O. Box 20312<br>
-                            Roanoke, VA 24018<br>
-                        </p>
-                    </div>
-                    <div class="form-col">
-                        <p class="get-started-form-instructions">
-                            To get started with Star City or if you have any questions please fill out the form below.
-                        </p>
-
-                        <form id="get_started_form" method="post" {{ form_enctype(form) }}>
-                            <div>
-                                {{ form_label(form.email) }}
-                                <div class="errors">
-                                    {{ form_errors(form.email) }}
-                                </div>
-                                {{ form_widget(form.email) }}
-                            </div>
-                            <div>
-                                {{ form_label(form.name) }}
-                                <div class="errors">
-                                    {{ form_errors(form.name) }}
-                                </div>
-                                {{ form_widget(form.name) }}
-                            </div>
-                            <div>
-                                {{ form_label(form.phone) }}
-                                <div class="errors">
-                                    {{ form_errors(form.phone) }}
-                                </div>
-                                {{ form_widget(form.phone) }}
-                            </div>
-                            <div>
-                                {{ form_label(form.message) }}
-                                <div class="errors">
-                                    {{ form_errors(form.message) }}
-                                </div>
-                                {{ form_widget(form.message) }}
-                            </div>
-
-                            {{ form_rest(form) }}
-
-                            <div class="submit-wrapper">
-                                <input type="submit" value="Send Message" class="btn get-started-submit-btn" formnovalidate />
-                                <div class="cl">&nbsp;</div>
-                            </div>
-                        </form>
-                        <hr>
-                        <p class="other-contact-methods">
-                            You may also call or email us:
-                        </p>
-
-                        <div class="contact-info">
-                            <a class="email-link" href="mailto:starcityrecycling@gmail.com">starcityrecycling@gmail.com</a>
-                            <span class="phone-number">(540) 798-9107</span>
-                            <div class="cl">&nbsp;</div>
-                        </div>
-                    </div>
-                    <div class="cl">&nbsp;</div>
-                </div>
+            <div>
+              {{ form_label(form.message) }}
+              <div class="errors">
+                {{ form_errors(form.message) }}
+              </div>
+              {{ form_widget(form.message) }}
             </div>
-        </div>
-        <div id="about_us">
-            <div class="container">
-                <div class="inner-container">
-                    <div>
-                        <div class="mission-col">
-                            <h1>Our Mission</h1>
 
-                            <p>
-                                Roanoke County does not offer a curbside recycling service, making recycling an inconvenience. So it is no surprise that our recycling rates are way behind our neighboring cities. Just take a look at the graph below.
-                            </p>
-                            <img src="/images/recycle_graph.png" alt="">
+            {{ form_rest(form) }}
 
-                            <p style="font-weight:bold; text-align: center; margin-top:10px;">
-                                Star City Recycling offers the convenient curbside service we need to make recycling simple in the Roanoke County!
-                            </p>
-                        </div>
-                        <div class="info-col">
-                            <div class="well">
-                            <p>
-                                My name is Ed Arsura and I have lived in Roanoke County for 15 years. In 2011 I graduated from James Madison University with a degree in Biology, which sparked my interest in environmental issues.
-                            </p>
-
-                                <p>
-                                    After graduation I moved to Portland, Oregon where I learned firsthand what a huge role recycling plays in the everyday life of Portland residents.  They have a great system.  Recyclables are picked up weekly and no sorting is required.  It is extremely simple. What caught my attention the most was that trash collections occurred only once every two weeks due to the amount of material that was recycled!
-                                </p>
-
-                                <p>
-                                    This is why I decided to start Star City Recycling upon my return to Roanoke; to make recycling simple like it should be.
-                                </p>
-
-                                <p>
-                                    So please join me in my effort to turn Roanoke County green, one blue bin at a time!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="submit-wrapper">
+              <input type="submit" value="Send Message" class="btn get-started-submit-btn" formnovalidate />
+              <div class="cl">&nbsp;</div>
             </div>
-        </div>
-        <div id="footer" style="height: 400px; width: 100%">
+          </form>
+          <hr>
+          <p class="other-contact-methods">
+          You may also call or email us:
+          </p>
 
+          <div class="contact-info">
+            <a class="email-link" href="mailto:starcityrecycling@gmail.com">starcityrecycling@gmail.com</a>
+            <span class="phone-number">(540) 798-9107</span>
+            <div class="cl">&nbsp;</div>
+          </div>
         </div>
+        <div class="cl">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+  <div id="about_us">
+    <div class="container">
+      <div class="inner-container">
+        <div>
+          <div class="mission-col">
+            <h1>Our Mission</h1>
 
-    </body>
-</html>
+            <p>
+            Roanoke County does not offer a curbside recycling service, making recycling an inconvenience. So it is no surprise that our recycling rates are way behind our neighboring cities. Just take a look at the graph below.
+            </p>
+            <img src="/images/recycle_graph.png" alt="">
+
+            <p style="font-weight:bold; text-align: center; margin-top:10px;">
+            Star City Recycling offers the convenient curbside service we need to make recycling simple in the Roanoke County!
+            </p>
+          </div>
+          <div class="info-col">
+            <div class="well">
+              <p>
+              My name is Ed Arsura and I have lived in Roanoke County for 15 years. In 2011 I graduated from James Madison University with a degree in Biology, which sparked my interest in environmental issues.
+              </p>
+
+              <p>
+              After graduation I moved to Portland, Oregon where I learned firsthand what a huge role recycling plays in the everyday life of Portland residents.  They have a great system.  Recyclables are picked up weekly and no sorting is required.  It is extremely simple. What caught my attention the most was that trash collections occurred only once every two weeks due to the amount of material that was recycled!
+              </p>
+
+              <p>
+              This is why I decided to start Star City Recycling upon my return to Roanoke; to make recycling simple like it should be.
+              </p>
+
+              <p>
+              So please join me in my effort to turn Roanoke County green, one blue bin at a time!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="footer" style="height: 400px; width: 100%">
+
+  </div>
+
+  </body>
+  </html>
