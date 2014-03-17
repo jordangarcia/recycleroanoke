@@ -62,6 +62,12 @@ body {
     font-size: 20px;
     line-height: 30px;
 }
+#main_contents ul > li.small{
+    font-weight:normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 20px;
+}
 #get_started_btn {
     width: 248px;
     height: 73px;

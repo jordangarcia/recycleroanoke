@@ -69,7 +69,7 @@ body {
     margin: 0 auto;
 }
 #main_contents {
-    padding: 35px 0 0 500px;
+    padding: 20px 0 0 550px;
 }
 #main_contents h3 {
     font-weight:normal;
@@ -77,19 +77,27 @@ body {
 }
 #main_contents ul {
     font-size: 24px;
-    list-style-type: disc;
-    list-style-position: outside;
+    list-style:none;
+    margin: 0 0 10px 0;
+    /*list-style-type: disc;*/
+    /*list-style-position: outside;*/
 }
 #main_contents ul > li{
     font-weight:normal;
     font-size: 20px;
     line-height: 30px;
 }
+#main_contents ul > li.small{
+    font-weight:normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 20px;
+}
 #get_started_btn {
     width: 248px;
     height: 73px;
     background: url("/images/get_started_btn.png") no-repeat transparent;
-    margin: 30px auto 0;
+    margin: 30px 0;
     display:block;
 }
 #get_started_btn:hover {
@@ -145,6 +153,7 @@ hr {
     font-family: Georgia, "Times New Roman", serif;
     font-weight:normal;
     margin: 0 0 5px;
+    text-align: center;
 }
 #can_cannot_recycle {
     margin: 30px 0;
